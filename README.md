@@ -45,7 +45,7 @@ If you want an extra challenge, accomplish the same task but without knowing the
 *Think about efficient code with regards to [Big-O complexity](http://en.wikipedia.org/wiki/Big_O_notation)*
 
 ## Challenge+++
-The predicted words have to be sorted by a priority which comes from user interactions. If a user picks one word from the predicted ones, the next time, it will be the first in the list. Every time the user chooses one word, its priority became stronger.
+The predicted words have to be sorted by the priority comes from user interactions. If a user picks one word from the predicted ones, the next time, it will be the first in the list. Every time the user chooses one word, its priority became stronger.
 
 ### Sample interaction and output predictions
 
