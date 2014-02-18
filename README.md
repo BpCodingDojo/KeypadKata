@@ -39,33 +39,33 @@ Print a list of all best-fitting words, meaning words that start with the word g
 sold solder soldered soldering solders soldier soldiered soldiering soldierly soldiers soldiery
 ```
 
-### Challenge++
+## Challenge++
 If you want an extra challenge, accomplish the same task but without knowing the number of times a digit is pressed. For example "7653" could mean sold, or poke, or even solenoid!
 
 *Think about efficient code with regards to [Big-O complexity](http://en.wikipedia.org/wiki/Big_O_notation)*
 
-### Challenge+++
+## Challenge+++
 The predicted words have to be sorted by a priority which comes from user interactions. If a user picks one word from the predicted ones, the next time, it will be the first in the list. Every time the user chooses one word, its priority became stronger.
 
-**Sample interaction and output predictions:**
+### Sample interaction and output predictions
 
 ```
 sold solder soldered soldering
 ```
 
-*Choosing soldered:*
+**Choosing soldered:**
 
 ```
 soldered sold solder soldering
 ```
 
-*Choosing solder three times:*
+**Choosing solder three times:**
 
 ```
 solder soldered sold soldering
 ```
 
-*Choosing soldered:*
+**Choosing soldered:**
 
 ```
 solder soldered sold soldering
