@@ -1,3 +1,19 @@
+# Getting started...
+
+```
+git clone https://BpCodingDojo:PASSWORD_HERE@github.com/BpCodingDojo/KeypadKata.git
+```
+
+### ...and finished
+
+At the end of the session, please commit your work to the directory of your team.
+
+```
+git add .
+git commit -a -m "Fokakrem"
+git push
+```
+
 # KeypadKata
 
 Telephone Keypads commonly have both digits and characters on them. This is to help with remembering & typing phone numbers (called a Phoneword), like 1-800-PROGRAM rather than 1-800-776-4726. This keypad layout is also helpful with T9, a way to type texts with word prediction.
