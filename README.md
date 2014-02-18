@@ -8,6 +8,8 @@ Your goal is to mimic some of the T9-features: given a series of digits from a t
 On standard console input, you will be given an array of digits (0 to 9) and spaces. All digits will be space-delimited, unless the digits represent multiple presses of the same button (for example pressing 2 twice gives you the letter 'B').
 
 Use the modern Telephone Keypads digit-letter layout:
+
+```
 0 = Not used
 1 = Not used
 2 = ABC
@@ -18,6 +20,7 @@ Use the modern Telephone Keypads digit-letter layout:
 7 = PQRS
 8 = TUV
 9 = WXYZ
+```
 
 You may use any source for looking up English-language words, though this [simple English-language dictionary](http://www.curlewcommunications.co.uk/wordlist.html) is complete enough for the challenge.
 
@@ -37,7 +40,7 @@ sold solder soldered soldering solders soldier soldiered soldiering soldierly so
 ```
 
 ### Challenge++
-If you want an extra challenge, accomplish the same challenge but without knowing the number of times a digit is pressed. For example "7653" could mean sold, or poke, or even solenoid!
+If you want an extra challenge, accomplish the same task but without knowing the number of times a digit is pressed. For example "7653" could mean sold, or poke, or even solenoid!
 
 *Think about efficient code with regards to [Big-O complexity](http://en.wikipedia.org/wiki/Big_O_notation)*
 
