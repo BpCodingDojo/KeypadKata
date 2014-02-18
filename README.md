@@ -33,17 +33,7 @@ Print a list of all best-fitting words, meaning words that start with the word g
 
 ### Sample Output
 ```
-sold
-solder
-soldered
-soldering
-solders
-soldier
-soldiered
-soldiering
-soldierly
-soldiers
-soldiery
+sold solder soldered soldering solders soldier soldiered soldiering soldierly soldiers soldiery
 ```
 
 ### Challenge++
@@ -55,35 +45,23 @@ The predicted words have to be sorted by a priority which comes from user intera
 **Sample interaction and output predictions:**
 
 ```
-sold
-solder
-soldered
-soldering
+sold solder soldered soldering
 ```
 
 *Choosing soldered:*
 
 ```
-soldered
-sold
-solder
-soldering
+soldered sold solder soldering
 ```
 
 *Choosing solder three times:*
 
 ```
-solder
-soldered
-sold
-soldering
+solder soldered sold soldering
 ```
 
 *Choosing soldered:*
 
 ```
-solder
-soldered
-sold
-soldering
+solder soldered sold soldering
 ```
