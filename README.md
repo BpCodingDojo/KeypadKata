@@ -40,6 +40,8 @@ Use the modern Telephone Keypads digit-letter layout:
 
 You may use any source for looking up English-language words, though this [simple English-language dictionary](http://www.curlewcommunications.co.uk/wordlist.html) is complete enough for the challenge.
 
+*You can download the dictionary [from the repo](https://raw.github.com/BpCodingDojo/KeypadKata/master/dictionary.txt)*
+
 ## Output Description
 Print a list of all best-fitting words, meaning words that start with the word generated using the given input on a telephone keypad. You do not have to only print words of the same length as the input (e.g. even if the input is 4-digits, it's possible there are many long words that start with those 4-digits).
 
