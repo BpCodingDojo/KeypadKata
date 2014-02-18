@@ -37,7 +37,9 @@ sold solder soldered soldering solders soldier soldiered soldiering soldierly so
 ```
 
 ### Challenge++
-If you want an extra challenge, accomplish the same challenge but without knowing the number of times a digit is pressed. For example "7653" could mean sold, or poke, or even solenoid! You must do this efficiently with regards to [Big-O complexity](http://en.wikipedia.org/wiki/Big_O_notation).
+If you want an extra challenge, accomplish the same challenge but without knowing the number of times a digit is pressed. For example "7653" could mean sold, or poke, or even solenoid!
+
+*Think about efficient code with regards to [Big-O complexity](http://en.wikipedia.org/wiki/Big_O_notation)*
 
 ### Challenge+++
 The predicted words have to be sorted by a priority which comes from user interactions. If a user picks one word from the predicted ones, the next time, it will be the first in the list. Every time the user chooses one word, its priority became stronger.
