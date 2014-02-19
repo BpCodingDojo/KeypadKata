@@ -1,0 +1,20 @@
+{
+  "name": "fluent-calculator-kata",
+  "version": "0.0.0",
+  "description": "Fluent Calculator Kata",
+  "main": "spec/calculator_spec.coffee",
+  "dependencies": {
+    "coffee-script": "*",
+    "jasmine-node": "*"
+  },
+  "engines": {
+    "node": ""
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "echo this makes no sense",
+    "test": "./node_modules/.bin/jasmine-node --coffee ./spec"
+  },
+  "author": "qw3r",
+  "license": "BSD"
+}
