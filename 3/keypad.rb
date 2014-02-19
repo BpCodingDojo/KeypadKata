@@ -7,28 +7,48 @@ class KeypadKata
 
 
   def predict(input)
-    map_numbers(input.split(' ')).join
+    NumericToTextConverter.new.convert input
   end
 
+end
 
+class NumericToTextConverter
+  CODING_TABLE = {
+    '2' => 'abc',
+    '3' => 'def',
+    '4' => 'ghi',
+    '5' => 'jkl',
+    '6' => 'mno',
+    '7' => 'pqrs',
+    '8' => 'tuv',
+    '9' => 'wxyz'
+  }
+
+
+  def convert(numbers)
+    numbers.split(' ').map do |number|
+      validate_number number
+      map_number_group_to_letter(number)
+    end.join
+  end
 
   private
 
-  def map_numbers(numbers)
-    coding_table = {
-      '2' => 'abc',
-      '3' => 'def',
-      '4' => 'ghi',
-      '5' => 'jkl',
-      '6' => 'mno',
-      '7' => 'pqrs',
-      '8' => 'tuv',
-      '9' => 'wxyz'}
-
-    numbers.map do |number|
-      coding_table[number[0]][number.length-1]
-    end
+  def map_number_group_to_letter(digit_group)
+    first_digit = digit_group[0]
+    letter_position = lookup_position(first_digit, digit_group)
+    CODING_TABLE[first_digit][letter_position]
   end
 
 
+
+  def lookup_position(digit, digit_group)
+    (digit_group.length-1) % CODING_TABLE[digit].length
+  end
+
+
+
+  def validate_number(number)
+    raise ArgumentError.new "Invalid input: #{number}" unless number == number[0] * number.length
+  end
 end
