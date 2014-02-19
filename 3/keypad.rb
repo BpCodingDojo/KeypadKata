@@ -16,16 +16,18 @@ class KeypadKata
 
   def map_numbers(numbers)
     coding_table = {
-      '2' => 'a',
-      '3' => 'd',
-      '4' => 'g',
-      '5' => 'j',
-      '6' => 'm',
-      '7' => 'p',
-      '8' => 't',
-      '9' => 'w'}
+      '2' => 'abc',
+      '3' => 'def',
+      '4' => 'ghi',
+      '5' => 'jkl',
+      '6' => 'mno',
+      '7' => 'pqrs',
+      '8' => 'tuv',
+      '9' => 'wxyz'}
 
-    numbers.map { |number| coding_table[number] }
+    numbers.map do |number|
+      coding_table[number[0]][number.length-1]
+    end
   end
 
 

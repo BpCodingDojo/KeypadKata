@@ -11,6 +11,7 @@ describe KeypadKata do
       [
         {name: 'one single digit input with one match', input: '9', expected: 'w'},
         {name: 'two single digit input with one match', input: '2 3', expected: 'ad'},
+        {name: 'two single digit input with one match', input: '8 666', expected: 'to'},
       ].each do |testcase|
         it "should return #{testcase[:expected]} for '#{testcase[:input]}' (#{testcase[:name]})" do
           expect(subject.predict testcase[:input]).to eq testcase[:expected]
