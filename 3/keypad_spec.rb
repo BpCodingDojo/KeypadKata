@@ -8,13 +8,13 @@ describe KeypadKata do
     context "when using a simple dictionary" do
       subject { KeypadKata.new 'simple.txt' }
 
-      it "should return w for '9'" do
-        expect(subject.predict '9').to eq 'w'
-      end
-
-
-      it "should return ad for '2 3'" do
-        expect(subject.predict '2 3').to eq 'ad'
+      [
+        {name: 'one single digit input with one match', input: '9', expected: 'w'},
+        {name: 'two single digit input with one match', input: '2 3', expected: 'ad'},
+      ].each do |testcase|
+        it "should return #{testcase[:expected]} for '#{testcase[:input]}' (#{testcase[:name]})" do
+          expect(subject.predict testcase[:input]).to eq testcase[:expected]
+        end
       end
 
     end
