@@ -7,7 +7,21 @@ class KeypadKata
 
 
   def predict(input)
+    find_in_dictionary convert_input_to_string(input)
+  end
+
+
+
+  private
+
+  def convert_input_to_string(input)
     NumericToTextConverter.new.convert input
+  end
+
+
+
+  def find_in_dictionary(prefix)
+    @words.drop_while { |word| !word.start_with? prefix }.take_while {|word| word.start_with? prefix }.join ' '
   end
 
 end
@@ -25,12 +39,15 @@ class NumericToTextConverter
   }
 
 
+
   def convert(numbers)
     numbers.split(' ').map do |number|
       validate_number number
       map_number_group_to_letter(number)
     end.join
   end
+
+
 
   private
 

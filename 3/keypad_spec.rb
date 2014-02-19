@@ -11,7 +11,7 @@ describe KeypadKata do
       [
         {name: 'one single digit input with one match', input: '9', expected: 'w'},
         {name: 'two single digit input with one match', input: '2 3', expected: 'ad'},
-        {name: 'two single digit input with one match', input: '8 666', expected: 'to'},
+        {name: 'two multi digit input with one match', input: '8 666', expected: 'to'},
       ].each do |testcase|
         it "should return #{testcase[:expected]} for '#{testcase[:input]}' (#{testcase[:name]})" do
           expect(subject.predict testcase[:input]).to eq testcase[:expected]
@@ -25,6 +25,17 @@ describe KeypadKata do
 
       it "should treat longer groups modulo group length" do
         expect(subject.predict '22222 8').to eq 'bt'
+      end
+
+
+
+      it "should return a single match for a prefix" do
+        expect(subject.predict '4').to eq 'gel'
+      end
+
+
+      it "should return multiple matches for 'a'" do
+        expect(subject.predict '2').to eq 'ab abe ad'
       end
 
     end
