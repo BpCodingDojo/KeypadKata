@@ -41,7 +41,7 @@ describe Keypad do
 
 
     context "when the input contains multiple characters" do
-      it "should convert '2 2' to 'a a'" do
+      it "should convert '2 2' to 'aa'" do
         expect(Keypad.to_text '2 2').to eq 'aa'
       end
 

@@ -8,7 +8,7 @@ end
 
 When /^I execute a search$/ do
   word_prefix = Keypad.to_text(@input_text)
-  lexicon = File.read('../dictionary.txt').force_encoding('UTF-8').split("\n")
+  lexicon = File.read('../dictionary.txt').split("\n")
   dictionary = Dictionary.new lexicon
   @output_text = dictionary.suggested_words_for word_prefix
 end
